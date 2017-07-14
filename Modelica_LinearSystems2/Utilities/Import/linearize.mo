@@ -17,7 +17,7 @@ protected
   Boolean OK3 = linearizeModel(problem=modelName, resultFile=fileName, startTime=t_linearize, stopTime=t_linearize);
 
   // Read linear system from file
-  Integer xuy[3] = Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension(fileName2, "ABCD");
+  Integer xuy[3] = Modelica_LinearSystems2.Utilities.Streams.readSystemDimension(fileName2, "ABCD");
   Integer nx = xuy[1];
   Integer nu = xuy[2];
   Integer ny = xuy[3];

@@ -173,7 +173,7 @@ algorithm
 
   // Determine array dimensions of the first linearization point
   fileName2 := fileName + String(is[1]) + ".mat";
-  xuy :=Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension(fileName2, "ABCD");
+  xuy := Modelica_LinearSystems2.Utilities.Streams.readSystemDimension(fileName2, "ABCD");
   nx := xuy[1];
   nu := xuy[2];
   ny := xuy[3];
