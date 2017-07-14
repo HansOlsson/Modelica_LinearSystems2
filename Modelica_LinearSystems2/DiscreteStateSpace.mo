@@ -3377,7 +3377,7 @@ with repetitive application of <a href=\"Modelica://Modelica_LinearSystems2.Disc
     import Modelica_LinearSystems2;
     import Modelica_LinearSystems2.DiscreteStateSpace;
     import Modelica_LinearSystems2.StateSpace;
-    import Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension;
+    import Modelica_LinearSystems2.Utilities.Streams.readSystemDimension;
 
     input String fileName = "dslin.mat" "Name of the state space system data file"
       annotation (
@@ -3388,7 +3388,7 @@ with repetitive application of <a href=\"Modelica://Modelica_LinearSystems2.Disc
     input String matrixName = "ABCD"
       "Name of the state space system matrix" annotation(Dialog);
     protected
-    Integer xuy[3] = ReadSystemDimension(fileName, matrixName) annotation(__Dymola_allowForSize=true);
+    Integer xuy[3] = readSystemDimension(fileName, matrixName) annotation(__Dymola_allowForSize=true);
     Integer nx = xuy[1] annotation(__Dymola_allowForSize=true);
     Integer nu = xuy[2] annotation(__Dymola_allowForSize=true);
     Integer ny = xuy[3] annotation(__Dymola_allowForSize=true);
@@ -3505,7 +3505,7 @@ The file must contain
       startTime=T_linearize,
       stopTime=T_linearize + 3*Ts);
 
-      Integer xuy[3] = Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension(fileName2, "ABCD");
+      Integer xuy[3]=Modelica_LinearSystems2.Utilities.Streams.readSystemDimension(fileName2, "ABCD");
       Integer nx = xuy[1];
       Integer nu = xuy[2];
       Integer ny = xuy[3];

@@ -73,23 +73,26 @@ convertClass("Modelica_LinearSystems2.Math.Matrices.Internal.readMatrixGain",
              "Modelica.Utilities.Streams.readRealMatrix")
 
 // Move Streams into Modelica_LinearSystems2.Utilities.Streams
+convertClass("Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension",
+             "Modelica_LinearSystems2.Utilities.Streams.readSystemDimension")
 convertClass("Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension2",
-             "Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension")
+             "Modelica_LinearSystems2.Utilities.Streams.readSystemDimension")
 convertClass("Modelica_LinearSystems2.StateSpace.Internal.readSystemDimension",
-             "Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension")
+             "Modelica_LinearSystems2.Utilities.Streams.readSystemDimension")
+
 convertClass("Modelica_LinearSystems2.Internal.Streams.ReadMatrixA",
              "Modelica_LinearSystems2.Utilities.Streams.readMatrixA")
-convertClass("Modelica_LinearSystems2.Internal.Streams.ReadMatrixB",
-             "Modelica_LinearSystems2.Utilities.Streams.readMatrixB")
-convertClass("Modelica_LinearSystems2.Internal.Streams.ReadMatrixC",
-             "Modelica_LinearSystems2.Utilities.Streams.readMatrixC")
-convertClass("Modelica_LinearSystems2.Internal.Streams.ReadMatrixD",
-             "Modelica_LinearSystems2.Utilities.Streams.readMatrixD")
 convertClass("Modelica_LinearSystems2.Internal.Streams.ReadMatrixA2",
              "Modelica_LinearSystems2.Utilities.Streams.readMatrixA2")
+convertClass("Modelica_LinearSystems2.Internal.Streams.ReadMatrixB",
+             "Modelica_LinearSystems2.Utilities.Streams.readMatrixB")
 convertClass("Modelica_LinearSystems2.Internal.Streams.ReadMatrixB2",
              "Modelica_LinearSystems2.Utilities.Streams.readMatrixB2")
+convertClass("Modelica_LinearSystems2.Internal.Streams.ReadMatrixC",
+             "Modelica_LinearSystems2.Utilities.Streams.readMatrixC")
 convertClass("Modelica_LinearSystems2.Internal.Streams.ReadMatrixC2",
              "Modelica_LinearSystems2.Utilities.Streams.readMatrixC2")
+convertClass("Modelica_LinearSystems2.Internal.Streams.ReadMatrixD",
+             "Modelica_LinearSystems2.Utilities.Streams.readMatrixD")
 convertClass("Modelica_LinearSystems2.Internal.Streams.ReadMatrixD2",
              "Modelica_LinearSystems2.Utilities.Streams.readMatrixD2")

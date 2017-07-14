@@ -12,7 +12,7 @@ function ReadMatrixA "Read the state matrix of a state space system from MATLAB 
     "Name of the generalized state space system matrix";
 
 protected
-  Integer xuy[3] = Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension(fileName, matrixName);
+  Integer xuy[3]=Modelica_LinearSystems2.Utilities.Streams.readSystemDimension(fileName, matrixName);
   Integer nx = xuy[1];
   Integer nu = xuy[2];
   Integer ny = xuy[3];

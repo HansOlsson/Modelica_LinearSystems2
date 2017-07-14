@@ -25,7 +25,7 @@ algorithm
   annotation (Documentation(info="<html>
 <h4>Syntax</h4>
 <blockquote><pre>
-B = Streams.<strong>ReadMatrixB2</strong>(fileName, matrixName, nx, nu)
+B = Streams.<strong>readMatrixB2</strong>(fileName, matrixName, nx, nu)
 </pre></blockquote>
 
 <h4>Description</h4>

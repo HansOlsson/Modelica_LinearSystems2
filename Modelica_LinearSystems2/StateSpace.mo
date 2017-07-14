@@ -9600,7 +9600,7 @@ subsystem.D = ss.D[outputIndex, inputIndex];
       import Modelica.Utilities.Streams;
       import Modelica_LinearSystems2;
       import Modelica_LinearSystems2.StateSpace;
-      import Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension;
+      import Modelica_LinearSystems2.Utilities.Streams.readSystemDimension;
 
       input String fileName = "dslin.mat" "Name of the state space system data file"
         annotation (
@@ -9612,7 +9612,7 @@ subsystem.D = ss.D[outputIndex, inputIndex];
         "Name of the state space system matrix (default is \"ABCD\") in the fileName"
         annotation (Dialog);
     protected
-      Integer xuy[3] = ReadSystemDimension(fileName, matrixName) annotation(__Dymola_allowForSize=true);
+      Integer xuy[3] = readSystemDimension(fileName, matrixName) annotation(__Dymola_allowForSize=true);
       Integer nx = xuy[1] annotation(__Dymola_allowForSize=true);
       Integer nu = xuy[2] annotation(__Dymola_allowForSize=true);
       Integer ny = xuy[3] annotation(__Dymola_allowForSize=true);
@@ -11617,7 +11617,7 @@ The uncontrollable poles are checked to to stable.
       "Read the number of inputs nu of a state space system from a file"
 
       import Modelica.Utilities.Streams;
-      import Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension;
+      import Modelica_LinearSystems2.Utilities.Streams.readSystemDimension;
 
       input String fileName = "ss_siso.mat"
         "Name of the state space system data file" annotation (Dialog(
@@ -11628,7 +11628,7 @@ The uncontrollable poles are checked to to stable.
 
       output Integer nu;
     protected
-      Integer xuy[3] = ReadSystemDimension(fileName, matrixName);
+      Integer xuy[3] = readSystemDimension(fileName, matrixName);
     algorithm
       nu := xuy[2];
     end readLength_nu;
@@ -11652,7 +11652,7 @@ The uncontrollable poles are checked to to stable.
       "Read the number of outputs ny of a state space system from a file"
 
       import Modelica.Utilities.Streams;
-      import Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension;
+      import Modelica_LinearSystems2.Utilities.Streams.readSystemDimension;
 
       input String fileName = "ss_siso.mat"
         "Name of the state space system data file" annotation (Dialog(
@@ -11663,7 +11663,7 @@ The uncontrollable poles are checked to to stable.
 
       output Integer ny;
     protected
-      Integer xuy[3] = ReadSystemDimension(fileName, matrixName);
+      Integer xuy[3] = readSystemDimension(fileName, matrixName);
     algorithm
       ny := xuy[3];
     end readLength_ny;
@@ -12638,7 +12638,7 @@ k = ---------- * ----------------------
       import Modelica;
       import Modelica.Utilities.Streams;
       import Modelica_LinearSystems2.StateSpace;
-      import Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension;
+      import Modelica_LinearSystems2.Utilities.Streams.readSystemDimension;
 
       input String fileName = "dslin" "Name of the result file";
         //annotation (Dialog(
@@ -12647,7 +12647,7 @@ k = ---------- * ----------------------
 
     protected
       String fileName2 = fileName + ".mat" "Name of the result file with extension";
-      Integer xuy[3] = ReadSystemDimension(fileName2, "ABCD");
+      Integer xuy[3] = readSystemDimension(fileName2, "ABCD");
       Integer nx = xuy[1];
       Integer nu = xuy[2];
       Integer ny = xuy[3];

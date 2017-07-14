@@ -4225,7 +4225,7 @@ Reads and loads a zeros-and-poles transfer function from a mat-file <tt>fileName
       import Modelica.Utilities.Streams;
       import Modelica_LinearSystems2.StateSpace;
       import Modelica_LinearSystems2.ZerosAndPoles;
-      import Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension;
+      import Modelica_LinearSystems2.Utilities.Streams.readSystemDimension;
 
       input String modelName "Name of the Modelica model" annotation(Dialog(__Dymola_translatedModel(translate=true)));
       input Real T_linearize = 0
@@ -4244,7 +4244,7 @@ Reads and loads a zeros-and-poles transfer function from a mat-file <tt>fileName
             resultFile=fileName,
             startTime=T_linearize,
             stopTime=T_linearize + 1);
-      Integer xuy[3] = ReadSystemDimension(fileName2, "ABCD");
+      Integer xuy[3] = readSystemDimension(fileName2, "ABCD");
       Integer nx = xuy[1];
       Integer nu = xuy[2];
       Integer ny = xuy[3];

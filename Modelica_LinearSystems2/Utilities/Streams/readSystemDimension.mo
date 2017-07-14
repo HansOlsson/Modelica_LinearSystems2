@@ -1,6 +1,5 @@
-within Modelica_LinearSystems2.Internal.Streams;
-function ReadSystemDimension
-  "Read the order nx of state matrix and the numbers nu and ny of inputs and outputs from MATLAB MAT file"
+within Modelica_LinearSystems2.Utilities.Streams;
+function readSystemDimension "Read the order nx of state matrix and the numbers nu and ny of inputs and outputs from MATLAB MAT file"
   import Modelica_LinearSystems2.StateSpace;
   import Modelica.Utilities.Streams;
 
@@ -25,7 +24,7 @@ algorithm
   annotation (Documentation(info="<html>
 <h4>Syntax</h4>
 <blockquote><pre>
-xuy = Streams.<strong>ReadSystemDimension</strong>(fileName, matrixName)
+xuy = Streams.<strong>readSystemDimension</strong>(fileName, matrixName)
 </pre></blockquote>
 
 <h4>Description</h4>
@@ -42,4 +41,4 @@ and the <b>number of outputs&nbsp;ny</b> are returned all collected in one vecto
 <a href=\"modelica://Modelica.Utilities.Streams.readRealMatrix\">Modelica.Utilities.Streams.readRealMatrix</a>
 </p>
 </html>"));
-end ReadSystemDimension;
+end readSystemDimension;

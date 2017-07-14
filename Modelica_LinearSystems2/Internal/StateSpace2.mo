@@ -326,7 +326,7 @@ encapsulated package Import
     import Modelica_LinearSystems2;
     import Modelica_LinearSystems2.StateSpace;
     import Modelica_LinearSystems2.Internal.StateSpace2;
-    import Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension;
+    import Modelica_LinearSystems2.Utilities.Streams.readSystemDimension;
 
     input String fileName = "dslin.mat" "Name of the state space system data file"
       annotation (
@@ -338,7 +338,7 @@ encapsulated package Import
       "Name of the state space system matrix" annotation(Dialog);
 
     protected
-    Integer xuy[3] = ReadSystemDimension(fileName, matrixName)  annotation(__Dymola_allowForSize=true);
+    Integer xuy[3] = readSystemDimension(fileName, matrixName)  annotation(__Dymola_allowForSize=true);
     Integer nx = xuy[1] annotation(__Dymola_allowForSize=true);
     Integer nu = xuy[2] annotation(__Dymola_allowForSize=true);
     Integer ny = xuy[3] annotation(__Dymola_allowForSize=true);

@@ -13,7 +13,7 @@ function readStateSpaceMatrix "Read the ABCD matrix of the state space form of a
     "Name of the generalized state space system matrix on file";
 
 protected
-  Integer xuy[3] = Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension(fileName, matrixName);
+  Integer xuy[3] = Modelica_LinearSystems2.Utilities.Streams.readSystemDimension(fileName, matrixName);
   Integer nx = xuy[1];
   Integer nu = xuy[2];
   Integer ny = xuy[3];
@@ -37,7 +37,7 @@ done in an extending function.
 
 <h4>See also</h4>
 <p>
-<a href=\"modelica://Modelica_LinearSystems2.Internal.Streams.ReadSystemDimension\">ReadSystemDimension</a>,
+<a href=\"modelica://Modelica_LinearSystems2.Utilities.Streams.readSystemDimension\">readSystemDimension</a>,
 <a href=\"modelica://Modelica.Utilities.Streams.readRealMatrix\">Modelica.Utilities.Streams.readRealMatrix</a>
 </p>
 </html>"));
