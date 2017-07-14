@@ -1,5 +1,5 @@
-within Modelica_LinearSystems2.Internal.Streams;
-function ReadMatrixB2 "Read the input matrix of a state space system from MATLAB MAT file"
+within Modelica_LinearSystems2.Utilities.Streams;
+function readMatrixB2 "Read the input matrix of a state space system from MATLAB MAT file"
   import Modelica.Utilities.Streams;
 
   input String fileName = DataDir + "abcd.mat"
@@ -41,4 +41,4 @@ of the given <b>system order&nbsp;nx</b> and the given <b>number of inputs&nbsp;
 <a href=\"modelica://Modelica.Utilities.Streams.readRealMatrix\">Modelica.Utilities.Streams.readRealMatrix</a>
 </p>
 </html>"));
-end ReadMatrixB2;
+end readMatrixB2;
